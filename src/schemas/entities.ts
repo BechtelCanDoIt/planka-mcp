@@ -8,6 +8,10 @@ import { z } from "zod";
 export const CardTypeSchema = z.enum(["project", "story"]);
 export type CardType = z.infer<typeof CardTypeSchema>;
 
+// List type enum - required for PLANKA 2.0
+export const ListTypeSchema = z.enum(["active", "closed"]);
+export type ListType = z.infer<typeof ListTypeSchema>;
+
 // Label colors - all valid PLANKA 2.0 colors
 export const LabelColorSchema = z.enum([
   "berry-red",
